@@ -39,8 +39,14 @@ if(!redisService || redisService == null) {
   if(isDocker) {
     credentials = {"hostname":"redis", "port":6379};
   } else {
-    credentials = {"hostname":"127.0.0.1", "port":6379};
-  }
+  if(process.env.VCAP_SERVICES){
+   var env = JSON.parse(process.env.VCAP_SERVICES)
+ 
+   credentials = env['rediscloud'][0]['credentials']
+ 
+  }else{
+   credentials = {"host":"127.0.0.1", "port":6379}
+ }	
 } else {
   if(isDocker) {
     console.log('The app is running in a Docker container on Bluemix.')
