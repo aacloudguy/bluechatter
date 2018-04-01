@@ -44,6 +44,7 @@ if(!redisService || redisService == null) {
  
    credentials = env['rediscloud'][0]['credentials']
    console.log('The app is running in Bluemix.')
+   console.log('Credentials read: ',credentials)
   }
 }
   if(isDocker) {
