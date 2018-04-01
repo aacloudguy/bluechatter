@@ -47,10 +47,7 @@ if(!redisService || redisService == null) {
    console.log('Credentials read: ',credentials)
   }
 }
-  if(isDocker) {
-    console.log('The app is running in a Docker container on Bluemix.')
-  }
-  credentials = redisService.credentials;
+  
 }
 
 // We need 2 Redis clients one to listen for events, one to publish events
