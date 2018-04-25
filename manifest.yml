@@ -14,12 +14,12 @@
 # limitations under the License.
 #
 declared-services:
-  redis-chatter:
+  AA-OpsTraining-redis-0001:
     label: rediscloud
     plan:  30mb
 applications:
-- name: bluechatter
+- name: AA-OpsTraining-App-0001
   memory: 128M
   command: node app.js
   services:
-  - redis-chatter
+  - AA-OpsTraining-redis-0001
