@@ -13,13 +13,13 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-declared-services:
-  AA-OpsTraining-redis-0001:
-    label: rediscloud
-    plan:  30mb
+#declared-services:
+#  AA-OpsTraining-redis-0001:
+#    label: rediscloud
+#    plan:  30mb
 applications:
 - name: AA-OpsTraining-App-0001
   memory: 128M
   command: node app.js
-  services:
-  - AA-OpsTraining-redis-0001
+#  services:
+# - AA-OpsTraining-redis-0001
